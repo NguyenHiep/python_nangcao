@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liststudents shelf="New Students">
+<student id="1">
+   <name>Thomas</name>
+   <date>10-10-1995</date>   
+</student>
+<student id="2">
+   <name>Louisa</name>
+   <date>25-08-1995</date>   
+</student>
+<student id="3">
+   <name>Samantha</name>
+   <date>08-07-1994</date>   
+</student>
+</liststudents>
