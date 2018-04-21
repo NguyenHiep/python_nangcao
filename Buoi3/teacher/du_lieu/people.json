@@ -1,0 +1,25 @@
+{
+    "company": [
+        {
+            "address": "137E Nguyen Chi Thanh",
+            "name": "Trung tam tin hoc"
+        }
+    ],
+    "people": [
+        {
+            "from": "Trung tam tin hoc",
+            "name": "Thuy Phuong",
+            "website": "csc.edu.vn"
+        },
+        {
+            "from": "Michigan",
+            "name": "Larry",
+            "website": "google.com"
+        },
+        {
+            "from": "Alabama",
+            "name": "Tim",
+            "website": "apple.com"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "CONG_TY": [
+        {
+            "Ten": "B\u00ecnh minh T\u00edm",
+            "Dia_chi": "45000 Tr\u1ea7n h\u01b0ng \u0110\u1ea1o Q.1 TP HCM ",
+            "Thoi_diem_Tang_gia": "17:30",
+            "ID": 1,
+            "Ty_le_Tang_gia": 10.0,
+            "Dien_thoai": "28-45999567",
+            "Mail": "mbtim2016@gmail.com"
+        }
+    ],
+    "PHONG": [
+        {
+            "Trang_thai": "CON_TRONG",
+            "So_Khach_Toi_da": "20",
+            "ID_LOAI_PHONG": "2",
+            "ID": 
