@@ -25,11 +25,30 @@ if __name__ == '__main__':
              setattr(sp, 'Amount', Amount)
              sp.them_sanpham()
         elif chon == 3:
-             print('Tìm kiếm sản phẩm theo tên')
+             print('Tìm kiếm sản phẩm theo tên \n')
+             search_name = input('Nhập tên sản phẩm cần tìm: \t')
+             sp = XL_Product()
+             setattr(sp, 'Name', search_name)
+             sp.timkiem_sanpham()
+            
         elif chon == 4:
-             print('Cập nhật sản phẩm')
+             print('Cập nhật sản phẩm \n')
+             Id     = int(input('Nhập id cần cập nhật: '))
+             Name   = input('Nhập tên sản phẩm: ')
+             Price  = float(input('Nhập giá sản phẩm: '))
+             Amount = int(input('Nhập đơn giá: '))
+             sp = XL_Product()
+             setattr(sp, 'Id', Id)
+             setattr(sp, 'Name', Name)
+             setattr(sp, 'Price', Price)
+             setattr(sp, 'Amount', Amount)
+             sp.capnhat_sanpham()
         elif chon == 5:
-             print('Xóa sản phẩm')
+             print('Xóa sản phẩm\n')
+             Id_sp = input('Nhập mã sản phẩm:')
+             sp = XL_Product()
+             setattr(sp, 'Id', Id_sp)
+             sp.xoa_sanpham()
         else:
             print('Không có lựa chọn này!')
 

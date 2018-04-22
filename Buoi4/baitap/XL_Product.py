@@ -48,13 +48,13 @@ class XL_Product():
     
     def timkiem_sanpham(self, GTTim):
         try:
-            conn= sqlite3.connect(r'du_lieu/product.db')
-            chuoiSQL='''SELECT Id, Name, Price, Amount FROM `product` WHERE Name LIKE ?'''
-            cursor=conn.execute(chuoiSQL,('%'+GTTim+'%'))
+            conn = sqlite3.connect(r'du_lieu/product.db')
+            chuoiSQL = '''SELECT `Id`, `Name`, `Price`, `Amount` FROM `product` WHERE `Name` LIKE ?'''
+            cursor = conn.execute(chuoiSQL,('%'+GTTim+'%'))
+            
             for sp in cursor:
                 print(sp[0],sp[1],sp[2],sp[3])
             conn.commit()
-            
         except Exception as ex:
             print('Error:', ex)
         finally:
@@ -64,8 +64,8 @@ class XL_Product():
         try:
             conn= sqlite3.connect(r'du_lieu/product.db')
             chuoiSQL='''UPDATE `product`
-                        SET Name = ?, Price = ?,Amount = ?
-                        WHERE Id = ?
+                        SET `Name` = ?, `Price` = ?, `Amount` = ?
+                        WHERE `Id` = ?
                      '''
             conn.execute(chuoiSQL,(self.Name,self.Price,self.Amount,self.Id))
             conn.commit()
@@ -75,12 +75,10 @@ class XL_Product():
         finally:
             conn.close()
         
-        
-        
     def xoa_sanpham(self):
         try:
-            conn= sqlite3.connect(r'du_lieu/product.db')
-            chuoiSQL='''DELETE from `product` WHERE Id = ?'''
+            conn = sqlite3.connect(r'du_lieu/product.db')
+            chuoiSQL='''DELETE FROM `product` WHERE `Id` = ?'''
             conn.execute(chuoiSQL,(self.Id))
             conn.commit()
             print('Xóa thành công!')
