@@ -27,9 +27,8 @@ class XL_Product():
         conn = sqlite3.connect('du_lieu/product.db')
         chuoiSQL = '''SELECT * FROM product'''
         cursor   = conn.execute(chuoiSQL)
-        conn.commit()
         for item in cursor:
-            print(item)
+            print(item[0], item[1], item[2], item[3])
         conn.commit()     
         conn.close()
     ## Xem lai cho nay    
@@ -50,8 +49,7 @@ class XL_Product():
         try:
             conn = sqlite3.connect(r'du_lieu/product.db')
             chuoiSQL = '''SELECT `Id`, `Name`, `Price`, `Amount` FROM `product` WHERE `Name` LIKE ?'''
-            cursor = conn.execute(chuoiSQL,('%'+GTTim+'%'))
-            
+            cursor = conn.execute(chuoiSQL,('%'+GTTim+'%',)) # phai co dau , o sau
             for sp in cursor:
                 print(sp[0],sp[1],sp[2],sp[3])
             conn.commit()

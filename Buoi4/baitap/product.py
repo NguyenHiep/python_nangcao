@@ -28,8 +28,7 @@ if __name__ == '__main__':
              print('Tìm kiếm sản phẩm theo tên \n')
              search_name = input('Nhập tên sản phẩm cần tìm: \t')
              sp = XL_Product()
-             setattr(sp, 'Name', search_name)
-             sp.timkiem_sanpham()
+             sp.timkiem_sanpham(search_name)
             
         elif chon == 4:
              print('Cập nhật sản phẩm \n')
